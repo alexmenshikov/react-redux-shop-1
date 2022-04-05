@@ -1,0 +1,153 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 30px;
+}
+
+.filter {
+  padding: 10px 15px;
+  border: 1px solid #232323;
+  transition: all 0.3s linear;
+  cursor: pointer;
+  border-radius: 32px 24px;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+
+  svg {
+    margin-left: 5px;
+  }
+
+  &:hover {
+    background-color: #dadada;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.bold {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.card__item {
+  border: 1px solid #232323;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow: hidden;
+  position: relative;
+  border-radius: 32px 24px;
+  background-color: #fff;
+
+  &-image {
+    height: 250px;
+    border-bottom: 1px solid #232323;
+    text-align: center;
+    flex-shrink: 0;
+    padding: 20px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  &-content {
+    padding: 15px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+  }
+
+  &-title {
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  &-description {
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+    color: rgba(0, 0, 0, 0.45);
+    flex-grow: 1;
+  }
+
+  &-price {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 20px;
+  }
+}
+
+.card__like {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background-color: #f3f3f3;
+  }
+}
+
+.card__del {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  cursor: pointer;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.45);
+  border-radius: 50%;
+  transition: all 0.3s linear;
+
+  &:hover {
+    background-color: #f3f3f3;
+  }
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 1px solid #232323;
+  border-right-color: transparent;
+  animation: loader-animation 0.4s ease-in 0.2s infinite;
+  margin: 0 auto;
+}
+
+.loader span {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid #232323;
+  border-left-color: transparent;
+  animation: loader-animation 0.5s ease-in 0.4s infinite;
+}
+
+@keyframes loader-animation {
+  0% {transform: rotate(0);}
+  100% {transform: rotate(360deg);}
+}
